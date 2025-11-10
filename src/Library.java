@@ -35,4 +35,19 @@ public class Library {
         }
         IO.println(title + " couldnt find book...");
     }
+
+    void returnBookByName(String title) {
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].title.equals((title))) {
+                if (books[i].isBorrowed) {
+                    books[i].returnBook();
+                    borrowCount--;
+                }
+            } else {
+                books[i].returnBook();
+            }
+            return;
+        }
+        IO.println();
+    }
 }

@@ -3,9 +3,9 @@ public class Book {
     String author;
     boolean isBorrowed;
 
-    void setValues(String title, String author) {
-        title = title;
-        author = author;
+    void setValues(String t, String a) {
+        title = t;
+        author = a;
         isBorrowed = false;
     }
 

@@ -20,4 +20,19 @@ public class Library {
         System.out.println("Total book count " + bookCount);
         IO.println("Total borrowwed count " + borrowCount);
     }
+
+    void borrowBook(String title) {
+        for (int i = 0; i < bookCount; i++) {
+            if (books[i].title.equals(title)) {
+                if (!books[i].isBorrowed) {
+                    books[i].borrow();
+                    borrowCount++;
+                } else {
+                    books[i].borrow();
+                }
+                return;
+            }
+        }
+        IO.println(title + " couldnt find book");
+    }
 }
